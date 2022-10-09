@@ -1,9 +1,18 @@
 .activities {
+    display: none;
+
+    @media screen and (min-width: $desktop) {
+        display: block;
+    }
+
     background-color: $white-color;
     padding-top: 0;
 
     &__title {
         margin-bottom: 50px;
+        font-size: 36px;
+        line-height: 1.17;
+        letter-spacing: 0.03em;
     }
 
     &__list {

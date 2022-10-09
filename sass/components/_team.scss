@@ -2,13 +2,22 @@
     background-color: $secondary-background-color;
 
     &__title {
-        margin-bottom: 50px;
+        font-size: 28px;
+        line-height: 1.18;
+        margin-bottom: 30px;
+
+        @media screen and (min-width: $desktop) {
+            margin-bottom: 50px;
+            font-size: 36px;
+        }
     }
 
     &__list {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         gap: 30px;
+        width: 100%;
     }
 }
 
@@ -17,9 +26,25 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    width: 100%;
+
+    @media screen and (min-width: $mobile) {
+        width: 450px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: calc((100% - 30px) / 2);
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: calc((100% - 90px) / 4);
+    }
 
     &__foto {
         display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
     }
 
     &__box {
@@ -27,7 +52,11 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding: 30px 10px;
+        padding: 30px 10px 24px;
+
+        @media screen and (min-width: $tablet) {
+            padding: 30px 10px;
+        }
     }
 
     &__name {

@@ -7,6 +7,14 @@ body {
     margin-left: auto;
 }
 
+body.modal-open {
+    overflow: hidden;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -37,22 +45,36 @@ p {
 }
 
 .container {
-    width: 1200px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding-right: 15px;
     padding-left: 15px;
+
+    @media screen and (min-width: $mobile) {
+        width: $mobile;
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: $tablet;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: $desktop;
+    }
 }
 
 .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: $desktop) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
 
 .title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
     text-align: center;
 
     &--hidden {
@@ -68,7 +90,6 @@ p {
 }
 
 .button {
-    padding: 6px 22px;
     border-radius: 4px;
     text-align: center;
     border: none;

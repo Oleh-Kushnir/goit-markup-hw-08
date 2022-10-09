@@ -7,17 +7,41 @@
 
     .container {
         display: flex;
-        align-items: baseline;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: 767px) {
+            gap: 60px;
+        }
+
+        @media screen and (min-width: $tablet) {
+            align-items: baseline;
+        }
     }
 
     .auth-nav {
         display: inline-block;
-        margin-right: 70px;
+        text-align: center;
+
+        @media screen and (max-width: 1199px) {
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        @media screen and (min-width: $desktop) {
+            margin-right: 70px;
+            margin-left: 0px;
+            text-align: start;
+        }
     }
 
     .contact {
         display: flex;
-        gap: 9px;
+        gap: 8px;
+
+        @media screen and (min-width: $desktop) {
+            gap: 9px;
+        }
+
         flex-direction: column;
     }
 }
@@ -30,6 +54,7 @@
         font-weight: 400;
         font-size: 14px;
         line-height: 1.71;
+        letter-spacing: 0.03em;
         color: $white-color;
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -46,6 +71,7 @@
         font-weight: 400;
         font-size: 14px;
         line-height: 1.71;
+        letter-spacing: 0.03em;
         color: $white-color;
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         opacity: 0.6;
@@ -62,6 +88,7 @@
         text-decoration: none;
         font-weight: 400;
         font-size: 14px;
+        letter-spacing: 0.03em;
         line-height: 1.71;
         color: $white-color;
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -76,12 +103,30 @@
 
 .footer {
     .join {
-        display: inline-block;
-        position: top;
-        margin-right: 93px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        max-width: 100%;
+
+        @media screen and (max-width: 1199px) {
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        @media screen and (min-width: $desktop) {
+            justify-content: start;
+            margin-right: 93px;
+        }
     }
 
     .join-call {
+        text-align: center;
+
+        @media screen and (min-width: $desktop) {
+            text-align: start;
+        }
+
         text-transform: uppercase;
         display: inline-block;
         margin-bottom: 20px;
@@ -89,62 +134,114 @@
     }
 }
 
+.subscribe {
+    @media screen and (max-width: 1199px) {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+        margin-top: 60px;
+    }
+}
+
 .subscribe__form {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
 
+    @media screen and (max-width: 1199px) {
+        align-items: center;
+    }
+
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+
+    @media screen and (min-width: $desktop) {
+        text-align: start;
+        margin: 0;
+    }
+
     .subscribe__box {
+        width: 100%;
         display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+
+        @media screen and (min-width: $desktop) {
+            flex-wrap: nowrap;
+            flex-direction: row;
+            gap: 12px;
+            margin: 0;
+        }
+    }
+
+    .subscribe__label {
+        margin-bottom: 20px;
+
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.15;
+        text-transform: uppercase;
+    }
+
+    .subscribe__input {
+        width: 100%;
+        max-width: 450px;
+
+        @media screen and (min-width: $mobile) {
+            width: 450px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            width: 358px;
+        }
+
+        padding: 15px 16px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+        background-color: inherit;
+
+        &::placeholder {
+            font-size: 16px;
+            line-height: 1.25;
+            color: $white-color;
+
+            opacity: 0.6;
+        }
+    }
+
+    .subscribe__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         gap: 12px;
-    }
-}
 
-.subscribe__label {
-    margin-bottom: 20px;
+        @media screen and (min-width: $desktop) {
+            gap: 10px;
+        }
 
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.15;
-    text-transform: uppercase;
-}
-
-.subscribe__input {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    width: 358px;
-    padding: 15px 16px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-    background-color: inherit;
-
-    &::placeholder {
-        font-size: 16px;
-        line-height: 1.25;
+        max-width: 200px;
+        padding: 10px 28px;
+        height: 50px;
+        cursor: pointer;
         color: $white-color;
-
-        opacity: 0.6;
+        background-color: $accent-color;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.88;
     }
-}
 
-.subscribe__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 10px 28px;
-    margin: 0;
-    border-radius: 4px;
-    width: 200px;
-    cursor: pointer;
-    color: $white-color;
-    background-color: $accent-color;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-}
-
-.subscribe__icon {
-    fill: currentColor;
+    .subscribe__icon {
+        fill: currentColor;
+    }
 }

@@ -2,7 +2,14 @@
     background-color: $white-color;
 
     &__title {
-        margin-bottom: 50px;
+        font-size: 28px;
+        line-height: 1.18;
+        letter-spacing: 0.03em;
+        margin-bottom: 30px;
+
+        @media screen and (min-width: $desktop) {
+            margin-bottom: 50px;
+        }
     }
 
     &__list {
@@ -10,12 +17,27 @@
         justify-content: center;
         align-items: center;
         gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        width: calc((100% - 30px) / 2);
+
+        @media screen and (min-width: $tablet) {
+            width: calc((100% - 60px) / 3);
+        }
+
+        @media screen and (min-width: $desktop) {
+            width: calc((100% - 150px) / 6);
+        }
+
+        height: 92px;
     }
 
     &__link {
         display: flex;
-        width: 170px;
-        height: 92px;
+        width: 100%;
+        height: 100%;
         border: 1px solid $icons-color;
         border-radius: 4px;
         justify-content: center;
