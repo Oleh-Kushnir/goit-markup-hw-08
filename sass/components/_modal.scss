@@ -214,9 +214,7 @@
 
 .modal__input.checkbox:checked+.modal__icon {
     border-color: transparent;
-    background-image: url(../images/icon-check.svg);
-    background-size: contain;
-    background-origin: border-box;
+    background-color: $accent-color;
 }
 
 .modal__button {

@@ -3,7 +3,7 @@
     background-image: linear-gradient(to right,
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
-        url("../images/mobileHero.jpg");
+        url("../images/hero-bg-mob.jpg");
 
     @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
@@ -12,7 +12,7 @@
         background-image: linear-gradient(to right,
                 rgba(47, 48, 58, 0.4),
                 rgba(47, 48, 58, 0.4)),
-            url("images/hero-bg-mob-2x.jpg");
+            url("../images/hero-bg-mob-2x.jpg");
     }
 
     @media screen and (min-width: $tablet) {
