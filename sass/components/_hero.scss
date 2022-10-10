@@ -1,73 +1,114 @@
 .hero {
     background-color: $footer-background-color;
-    background-image: linear-gradient(to right,
-            rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)),
-        url("../images/hero-bg-mob.jpg");
-
-    @media (min-device-pixel-ratio: 2),
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-        background-image: linear-gradient(to right,
-                rgba(47, 48, 58, 0.4),
-                rgba(47, 48, 58, 0.4)),
-            url("../images/hero-bg-mob-2x.jpg");
-    }
-
-    @media screen and (min-width: $tablet) {
-        background-image: linear-gradient(to right,
-                rgba(47, 48, 58, 0.4),
-                rgba(47, 48, 58, 0.4)),
-            url("../images/hero-bg-tab.jpg");
-
-        @media (min-device-pixel-ratio: 2),
-        (-webkit-min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-            background-image: linear-gradient(to right,
-                    rgba(47, 48, 58, 0.4),
-                    rgba(47, 48, 58, 0.4)),
-                url("../images/hero-bg-tab-2x.jpg");
+        text-align: center;
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../images/hero-bg-mob.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        max-width: 768px;
+        padding: 118px 0;
+        margin-left: auto;
+        margin-right: auto;
+    
+        @media screen and (max-width: 768px) {
+            @media screen and (min-resolution: 2dppx) {
+                background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                    url(../../images/hero-bg-desk-2x.jpg);
+            }
         }
-    }
-
-    @media screen and (min-width: $desktop) {
-        background-image: linear-gradient(to right,
-                rgba(47, 48, 58, 0.4),
-                rgba(47, 48, 58, 0.4)),
-            url("../images/hero-bg-desk.jpg");
-
-        @media (min-device-pixel-ratio: 2),
-        (-webkit-min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-            background-image: linear-gradient(to right,
-                    rgba(47, 48, 58, 0.4),
-                    rgba(47, 48, 58, 0.4)),
-                url("../images/hero-bg-desk-2x.jpg");
+    
+        @media screen and (min-width: 768px) and (max-width: 1200px) {
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url(../../images/hero-bg-tab.jpg);
+            max-width: 1200px;
+    
+            @media screen and (min-resolution: 2dppx) {
+                background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                    url(../../images/hero-bg-tab-2x.jpg);
+            }
         }
-    }
+    
+        @media screen and (min-width: 1200px) {
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url(../../images/hero-bg-desk.jpg);
+            padding: 200px 0px;
+            max-width: 1600px;
+    
+            @media screen and (min-resolution: 2dppx) {
+                background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                    url(../../images/hero.jpg);
+            }
+        }
+    // background-color: $footer-background-color;
+    // background-image: linear-gradient(to right,
+    //         rgba(47, 48, 58, 0.4),
+    //         rgba(47, 48, 58, 0.4)),
+    //     url("../images/hero-bg-mob.jpg");
 
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    max-width: 100%;
+    // @media (min-device-pixel-ratio: 2),
+    // (-webkit-min-device-pixel-ratio: 2),
+    // (min-resolution: 192dpi),
+    // (min-resolution: 2dppx) {
+    //     background-image: linear-gradient(to right,
+    //             rgba(47, 48, 58, 0.4),
+    //             rgba(47, 48, 58, 0.4)),
+    //         url("../images/hero-bg-mob-2x.jpg");
+    // }
 
-    @media screen and (min-width: $mobile) {
-        max-width: $mobile;
-    }
+    // @media screen and (min-width: $tablet) {
+    //     background-image: linear-gradient(to right,
+    //             rgba(47, 48, 58, 0.4),
+    //             rgba(47, 48, 58, 0.4)),
+    //         url("../images/hero-bg-tab.jpg");
 
-    @media screen and (min-width: $tablet) {
-        max-width: $tablet;
-    }
+    //     @media (min-device-pixel-ratio: 2),
+    //     (-webkit-min-device-pixel-ratio: 2),
+    //     (min-resolution: 192dpi),
+    //     (min-resolution: 2dppx) {
+    //         background-image: linear-gradient(to right,
+    //                 rgba(47, 48, 58, 0.4),
+    //                 rgba(47, 48, 58, 0.4)),
+    //             url("../images/hero-bg-tab-2x.jpg");
+    //     }
+    // }
 
-    @media screen and (min-width: $desktop) {
-        max-width: 1600px;
-    }
+    // @media screen and (min-width: $desktop) {
+    //     background-image: linear-gradient(to right,
+    //             rgba(47, 48, 58, 0.4),
+    //             rgba(47, 48, 58, 0.4)),
+    //         url("../images/hero-bg-desk.jpg");
 
-    margin-left: auto;
-    margin-right: auto;
+    //     @media (min-device-pixel-ratio: 2),
+    //     (-webkit-min-device-pixel-ratio: 2),
+    //     (min-resolution: 192dpi),
+    //     (min-resolution: 2dppx) {
+    //         background-image: linear-gradient(to right,
+    //                 rgba(47, 48, 58, 0.4),
+    //                 rgba(47, 48, 58, 0.4)),
+    //             url("../images/hero-bg-desk-2x.jpg");
+    //     }
+    // }
+
+    // background-position: center;
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // max-width: 100%;
+
+    // @media screen and (min-width: $mobile) {
+    //     max-width: $mobile;
+    // }
+
+    // @media screen and (min-width: $tablet) {
+    //     max-width: $tablet;
+    // }
+
+    // @media screen and (min-width: $desktop) {
+    //     max-width: 1600px;
+    // }
+
+    // margin-left: auto;
+    // margin-right: auto;
 
     &__container {
         display: flex;
